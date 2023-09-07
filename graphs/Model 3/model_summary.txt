@@ -1,0 +1,48 @@
+Model: "sequential_33"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ sequential_32 (Sequential)  (None, 300, 300, 3)       0         
+                                                                 
+ rescaling_10 (Rescaling)    (None, 300, 300, 3)       0         
+                                                                 
+ conv2d_66 (Conv2D)          (None, 298, 298, 32)      896       
+                                                                 
+ max_pooling2d_42 (MaxPooli  (None, 149, 149, 32)      0         
+ ng2D)                                                           
+                                                                 
+ conv2d_67 (Conv2D)          (None, 147, 147, 32)      9248      
+                                                                 
+ max_pooling2d_43 (MaxPooli  (None, 73, 73, 32)        0         
+ ng2D)                                                           
+                                                                 
+ conv2d_68 (Conv2D)          (None, 71, 71, 32)        9248      
+                                                                 
+ max_pooling2d_44 (MaxPooli  (None, 35, 35, 32)        0         
+ ng2D)                                                           
+                                                                 
+ conv2d_69 (Conv2D)          (None, 35, 35, 32)        9248      
+                                                                 
+ leaky_re_lu_16 (LeakyReLU)  (None, 35, 35, 32)        0         
+                                                                 
+ conv2d_70 (Conv2D)          (None, 35, 35, 32)        9248      
+                                                                 
+ batch_normalization_8 (Bat  (None, 35, 35, 32)        128       
+ chNormalization)                                                
+                                                                 
+ leaky_re_lu_17 (LeakyReLU)  (None, 35, 35, 32)        0         
+                                                                 
+ conv2d_71 (Conv2D)          (None, 35, 35, 64)        51264     
+                                                                 
+ global_average_pooling2d_7  (None, 64)                0         
+  (GlobalAveragePooling2D)                                       
+                                                                 
+ dense_28 (Dense)            (None, 128)               8320      
+                                                                 
+ dense_29 (Dense)            (None, 2)                 258       
+                                                                 
+=================================================================
+Total params: 97858 (382.26 KB)
+Trainable params: 97794 (382.01 KB)
+Non-trainable params: 64 (256.00 Byte)
+_________________________________________________________________
